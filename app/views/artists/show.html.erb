@@ -1,0 +1,11 @@
+<h1> <%= @artist.name %> </h1>
+
+
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li>
+      <% #show each artist's song - hence interate over @artist.songs - after the comma, comes the path %>
+      <%= link_to song.title, song_path(song)%>
+    </l1>
+  <% end %>
+</ul>

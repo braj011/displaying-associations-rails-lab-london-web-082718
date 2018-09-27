@@ -1,0 +1,20 @@
+<h1> VIEW ALL SONGS</h1>
+
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <% #here, we want to link to show each song's title and song's artist  %>
+      <%  #link to  song show page   - CAN YOU DO THIS WITH A LINK_TO ???%>
+
+      <!-- <a href="<%#= song_path(song) %>"> -->
+          <%= link_to song.artist.name, artist_path(song.artist) %> -
+
+           <%= link_to song.title, song_path(song) %>
+
+
+           <% # link_to creates hrefs   %>
+      <!-- </a> -->
+    </li>
+  <% end %>
+</ul>

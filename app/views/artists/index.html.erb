@@ -1,0 +1,12 @@
+<h1> VIEW ALL ARTISTS </h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <% #here, we want to link to each artist show page - after the comma, comes the path %>
+      <%= link_to artist.name, artist_path(artist) %> -
+      <% #want the count of each artist's songs below it - using song_count method %>
+      <%= artist.song_count %> songs
+    </l1>
+  <% end %>
+</ul>

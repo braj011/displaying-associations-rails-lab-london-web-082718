@@ -1,0 +1,8 @@
+<h1> <%=  @song.title %></h1>
+
+
+by  <%= link_to @song.artist.name, @song.artist %>
+<%  # this by is just text on page %>
+
+  <%  # link_to *name of the link*, *path / page to link to*  %>
+  <% # this is an erb helper - creates HTML syntax easily  %>

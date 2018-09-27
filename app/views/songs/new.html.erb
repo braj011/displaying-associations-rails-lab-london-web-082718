@@ -5,7 +5,14 @@
   <%= f.text_field :title %>
   <br />
 
+  <%= f.label "artist", "Artist" %>
+  <%= f.collection_select :artist_id, @artists, :id, :name %>
+
+  <% # :artist_id - already in song for - i.e. the selection dropdown param  %>
+  <% # @artists- the collection of artists that exist  %>
+  <% # :id - the value given to each option in the dropdown %>
+  <% # :name -  the name of each artist, i.e. what we see i.e. artist.name %>
+
+
   <%= f.submit %>
 <% end %>
-
-
